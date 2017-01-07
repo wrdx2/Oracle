@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>编辑EMP信息</description>
+    <display-name>编辑</display-name>
+    <servlet-name>EMPEdit.do</servlet-name>
+    <servlet-class>com.dao.oracle.servlet.EMPEdit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>删除EMP表一条数据</description>
+    <display-name>删除</display-name>
+    <servlet-name>EMPDelete.do</servlet-name>
+    <servlet-class>com.dao.oracle.servlet.EMPDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>添加一条数据</description>
+    <display-name>添加</display-name>
+    <servlet-name>EMPAdd.do</servlet-name>
+    <servlet-class>com.dao.oracle.servlet.EMPAdd</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>EMPEdit.do</servlet-name>
+    <url-pattern>/servlet/EMPEdit.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EMPDelete.do</servlet-name>
+    <url-pattern>/servlet/EMPDelete.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EMPAdd.do</servlet-name>
+    <url-pattern>/servlet/EMPAdd.do</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
